@@ -1,0 +1,31 @@
+---
+title: "Assignment 6 - Bankruptcies due to Covid-19?"
+author: "Joakim Sjøhaug"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+source("./bankruptcies.R")
+library(rvest)
+library(tidyverse)
+library(lubridate)
+```
+
+
+## Cumulative number of Bankruptcies
+
+In this assignment we will use data from Bronnesundregisteret to see if Covid-19 have had any impact on the number of business that have got 
+bankrupt this year compared to last year. We scrape the data from the table present on Brregs-website. With the data we count the number of bankruptcies 
+each month for each county in Norway.
+
+## Results
+
+```{r plot, message=FALSE}
+plot()
+```
+
+From the results we can assume that Covid-19 have not had any impact on the number of companies that went bankrupt. The differences between 2019 and 2020 are 
+very small and these may be natural variances. 
