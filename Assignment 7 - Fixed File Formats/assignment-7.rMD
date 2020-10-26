@@ -1,0 +1,43 @@
+---
+title: "Assignment 7 - Read large fixed file formats"
+author: "Joakim Sjøhaug"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+source("./assignment-7.R")
+library(rvest)
+library(tidyverse)
+library(lubridate)
+```
+
+
+## Large fixed file formats
+
+In this assignment we will work with large fixed file formats from <i>Centers of Disease Control and Prevention (CDC)</i>.
+Since the files are so huge we used a fixed file format read to extract only the columns we needed. The data was persisted
+to a file named <i>extracted-<filename-cdc></i> with only the data we needed. This reduced the file size drastically.
+
+## Proportion of boys to girls yearly
+
+```{r plot, message=FALSE}
+bg_pp
+```
+<p>The proportion of boys to girls births each year seems to be equal, with the amount of male births each
+year to be around 52% and girl births 48%.<p>
+
+## Average weight at birth by gender
+```{r plot1, message=FALSE}
+avg_w_g
+```
+<p>The plot shows that males tend to have a higher weight at birth than girls. </p>
+
+## Proportion of boys to grils week day
+```{r plot2, message=FALSE}
+b_g_pp
+```
+
+<p>From the plot, we can see that almost the same amount of boys and girls are birth each day of the week. </p>
